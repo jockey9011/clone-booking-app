@@ -38,6 +38,12 @@ app.use(cors({
   credentials: true 
 }));
 
+// Definir ruta raíz
+app.get('/', (req, res) => {
+  res.send('Welcome to the booking app!'); 
+});
+
+// Rutas
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
 app.use('/api/hotels', hotelsRoute);
@@ -46,6 +52,7 @@ app.use('/api/bookings', bookingRoute);
 app.use('/api/images', imagesRoute); 
 app.use('/api/reviews', reviewsRoute); 
 
+// Manejo de errores
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Server Error - No available";
@@ -64,7 +71,4 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}!`);
 });
 
-
-
 export default app;
-

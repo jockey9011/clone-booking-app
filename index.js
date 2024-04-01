@@ -34,7 +34,7 @@ app.use(express.json());
 
 // Configuración de CORS
 app.use(cors({
-  origin: 'https://bookingcloneapp.netlify.app', 
+  origin: 'https://clone-booking-app-front.vercel.app', 
   credentials: true 
 }));
 

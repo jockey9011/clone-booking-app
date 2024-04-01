@@ -34,7 +34,7 @@ app.use(express.json());
 
 // Configuración de CORS
 app.use(cors({
-  origin: 'http://localhost:5173', 
+  origin: 'https://bookingcloneapp.netlify.app', 
   credentials: true 
 }));
 

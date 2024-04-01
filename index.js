@@ -34,7 +34,7 @@ app.use(express.json());
 
 // Configuración de CORS
 app.use(cors({
-  origin: 'https://clone-booking-app.onrender.com', 
+  origin: 'http://localhost:5173', 
   credentials: true 
 }));
 
@@ -57,10 +57,13 @@ app.use((err, req, res, next) => {
   });
 });
 
-const server = app.listen(process.env.PORT || 3000, () => {
+const PORT = 3000; // Especificar el puerto directamente
+
+app.listen(PORT, () => {
   connectDB();
-  console.log(`Server is running on port ${process.env.PORT || 3000}!`);
+  console.log(`Server is running on port ${PORT}!`);
 });
+
 
 
 export default app;

@@ -38,7 +38,7 @@
       "^.+\\.jsx?$": "babel-jest"
     },
     "testEnvironmentOptions": {
-      "url": "http://localhost:3000"
+      "url": "https://clone-booking-app-1.onrender.com"
     }
   }
 }
